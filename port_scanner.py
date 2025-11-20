@@ -31,7 +31,7 @@ def create_socket():
 
     return s
 
-
+#Prueba push
 def port_scanner(port,host):
 
     s= create_socket()
