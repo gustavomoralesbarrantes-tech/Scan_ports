@@ -1,6 +1,14 @@
 import argparse
+import sys
 import time
 import scapy.all as scapy
+import signal
+
+def def_handler(sig, frame):
+    print("Saliendo..\n")
+    sys.exit(1)
+
+signal.signal(signal.SIGINT, def_handler)
 
 def get_arguments():
     parser = argparse.ArgumentParser(description="ARP Spoofer")
